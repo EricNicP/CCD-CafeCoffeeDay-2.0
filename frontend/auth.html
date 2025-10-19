@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>CCD 2.0 - Sign in</title>
+    <style>
+        /* Coffee-themed sign-in page */
+        html,body{height:100%;margin:0}
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background: radial-gradient(circle at 10% 10%, rgba(20,20,20,1), rgba(0,0,0,1) 40%), #000; display:flex; align-items:center; justify-content:center; height:100vh; margin:0; color: #eaffea; background-image: radial-gradient( circle at 20% 20%, rgba(35,20,10,0.15), transparent 10% ), linear-gradient(180deg,#000,#050505); }
+        /* coffee-bean pattern SVG overlay (subtle) */
+        body::before { content: ''; position: fixed; inset: 0; background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='200' height='200' viewBox='0 0 200 200'><g fill='none' stroke='%23000' stroke-opacity='0.06' stroke-width='1'><ellipse cx='40' cy='40' rx='14' ry='20' transform='rotate(-20 40 40)' fill='%23000000' fill-opacity='0.06'/><ellipse cx='120' cy='90' rx='14' ry='20' transform='rotate(12 120 90)' fill='%23000000' fill-opacity='0.06'/><ellipse cx='180' cy='30' rx='14' ry='20' transform='rotate(-30 180 30)' fill='%23000000' fill-opacity='0.06'/></g></svg>"); background-repeat: repeat; opacity: 0.08; pointer-events: none;}
+        .auth-card { background: linear-gradient(180deg, rgba(10,10,10,0.95), rgba(0,0,0,0.9)); padding: 28px; border-radius: 12px; box-shadow: 0 12px 40px rgba(0,0,0,0.9), 0 0 26px rgba(0,255,65,0.12); width: 380px; border: 2px solid rgba(0,255,65,0.16); }
+        h2 { margin-bottom: 12px; color: #00ff41; }
+        label { font-weight:600; font-size:0.9rem; color:#c8ffc8; display:block; margin-top:10px; }
+        input { width:100%; padding:10px 12px; margin-top:6px; border-radius:8px; border:1px solid rgba(255,255,255,0.04); font-size:1rem; background: rgba(255,255,255,0.02); color: #eaffea }
+        .btn { margin-top:16px; width:100%; padding:10px; border:none; border-radius:8px; background: rgba(0,255,65,0.98); color:black; font-weight:700; cursor:pointer; box-shadow: 0 8px 28px rgba(0,255,65,0.08); }
+        .secondary { background: rgba(255,255,255,0.04); color: #eaffea }
+        .row { display:flex; gap:8px; }
+        .muted { color:rgba(230,255,230,0.45); font-size:0.9rem; margin-top:8px; }
+        .brand { text-align:center; margin-bottom:12px }
+        .brand .logo { font-size:28px; color: #00ff41; font-weight:800 }
+    </style>
+    <script>
+        function doLogin(e) {
+            e && e.preventDefault();
+            const name = document.getElementById('login-name').value.trim();
+            const password = document.getElementById('login-password').value.trim();
+            if (!name || !password) { alert('Please enter name and password'); return; }
+            try { localStorage.setItem('ccd_authed', '1'); localStorage.setItem('ccd_user', name); } catch(e){}
+            window.location.href = 'welcome.html';
+        }
+
+        function doRegister(e) {
+            e && e.preventDefault();
+            const name = document.getElementById('reg-name').value.trim();
+            const password = document.getElementById('reg-password').value.trim();
+            if (!name || !password) { alert('Please enter name and password'); return; }
+            try { localStorage.setItem('ccd_authed', '1'); localStorage.setItem('ccd_user', name); } catch(e){}
+            window.location.href = 'welcome.html';
+        }
+
+        // If already authenticated, go to index
+        (function(){ try{ if (localStorage.getItem('ccd_authed') === '1') { window.location.href = 'index.html'; } }catch(e){} })();
+    </script>
+</head>
+<body>
+    <div class="auth-card">
+        <h2>Welcome to CCD 2.0</h2>
+        <form onsubmit="doLogin(event)">
+            <label for="login-name">Name</label>
+            <input id="login-name" type="text" autocomplete="name" />
+            <label for="login-password">Password</label>
+            <input id="login-password" type="password" autocomplete="current-password" />
+            <button class="btn" type="submit">Login</button>
+        </form>
+
+        <div class="muted">Or create a new account</div>
+        <form onsubmit="doRegister(event)">
+            <label for="reg-name">Name</label>
+            <input id="reg-name" type="text" />
+            <label for="reg-password">Password</label>
+            <input id="reg-password" type="password" />
+            <div class="row"><button class="btn secondary" type="submit">Create Account</button></div>
+        </form>
+    </div>
+</body>
+</html>

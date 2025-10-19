@@ -1,0 +1,286 @@
+.profile-page {
+  min-height: 100vh;
+  padding: 20px 0;
+}
+
+.profile-header {
+  text-align: center;
+  margin-bottom: 40px;
+  padding: 40px 20px;
+  background: linear-gradient(135deg, #8B4513, #A0522D);
+  color: white;
+  border-radius: 15px;
+  margin: 0 20px 40px 20px;
+}
+
+.profile-header h1 {
+  font-size: 3rem;
+  margin-bottom: 15px;
+  font-weight: bold;
+}
+
+.profile-header p {
+  font-size: 1.2rem;
+  opacity: 0.9;
+}
+
+.profile-tabs {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 30px;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 30px;
+}
+
+.tab-btn {
+  padding: 12px 30px;
+  border: 2px solid #8B4513;
+  background: white;
+  color: #8B4513;
+  border-radius: 25px 25px 0 0;
+  cursor: pointer;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  margin: 0 5px;
+}
+
+.tab-btn:hover {
+  background: #8B4513;
+  color: white;
+}
+
+.tab-btn.active {
+  background: #8B4513;
+  color: white;
+  box-shadow: 0 -4px 15px rgba(139, 69, 19, 0.3);
+}
+
+.profile-content {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.profile-section {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 30px;
+}
+
+.profile-card {
+  background: white;
+  border-radius: 15px;
+  padding: 30px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.profile-card h2 {
+  color: #8B4513;
+  margin-bottom: 20px;
+  font-size: 1.8rem;
+}
+
+.profile-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.profile-stats {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.stat-card {
+  background: white;
+  border-radius: 15px;
+  padding: 20px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.stat-card h3 {
+  color: #8B4513;
+  margin-bottom: 10px;
+  font-size: 1.2rem;
+}
+
+.stat-card p {
+  color: #666;
+  font-size: 1.1rem;
+  font-weight: bold;
+}
+
+.orders-section h2 {
+  color: #8B4513;
+  margin-bottom: 30px;
+  font-size: 1.8rem;
+}
+
+.no-orders {
+  text-align: center;
+  padding: 60px 20px;
+  color: #666;
+}
+
+.no-orders p {
+  font-size: 1.2rem;
+  color: #999;
+}
+
+.orders-list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.order-card {
+  background: white;
+  border-radius: 15px;
+  padding: 25px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.order-card:hover {
+  transform: translateY(-2px);
+}
+
+.order-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+  padding-bottom: 15px;
+  border-bottom: 1px solid #eee;
+}
+
+.order-info h3 {
+  color: #8B4513;
+  margin-bottom: 5px;
+  font-size: 1.3rem;
+}
+
+.order-info p {
+  color: #666;
+  font-size: 0.9rem;
+}
+
+.order-status {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 5px;
+}
+
+.status-badge {
+  padding: 4px 12px;
+  border-radius: 15px;
+  font-size: 0.8rem;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.status-badge.pending {
+  background: #fff3cd;
+  color: #856404;
+}
+
+.status-badge.completed {
+  background: #d4edda;
+  color: #155724;
+}
+
+.status-badge.preparing {
+  background: #cce5ff;
+  color: #004085;
+}
+
+.order-total {
+  font-weight: bold;
+  color: #8B4513;
+  font-size: 1.1rem;
+}
+
+.order-items {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.order-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 0;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.order-item:last-child {
+  border-bottom: none;
+}
+
+.item-name {
+  font-weight: 500;
+  color: #333;
+}
+
+.item-quantity {
+  color: #666;
+  font-size: 0.9rem;
+}
+
+.item-price {
+  font-weight: bold;
+  color: #8B4513;
+}
+
+@media (max-width: 768px) {
+  .profile-header {
+    margin: 0 10px 30px 10px;
+    padding: 30px 15px;
+  }
+  
+  .profile-header h1 {
+    font-size: 2.5rem;
+  }
+  
+  .profile-section {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+  
+  .form-row {
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+  
+  .profile-tabs {
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  .tab-btn {
+    border-radius: 25px;
+    margin: 0;
+  }
+  
+  .order-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+  
+  .order-status {
+    align-items: flex-start;
+  }
+}
