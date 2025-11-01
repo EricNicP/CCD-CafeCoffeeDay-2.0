@@ -5,6 +5,7 @@ Brewing the perfect digital coffee experience.
 Welcome to CCD 2.0, a full-stack café management system built with a Python/Flask backend and a React.js frontend. It brings the modern coffee shop experience online — from ordering to loyalty rewards.
 
 
+
 ✨ Features
 
 🛍️ Smart online ordering with item customization
@@ -24,6 +25,7 @@ Welcome to CCD 2.0, a full-stack café management system built with a Python/Fla
 🎁 In-app promotions, discounts, and special offers
 
 
+
 🛠️ Tech Stack
 
 Backend: Python + Flask + SQLAlchemy
@@ -33,6 +35,7 @@ Frontend: React.js (Hooks-based)
 Database: SQLite (can scale to PostgreSQL/MySQL)
 
 Styling: CSS with Flexbox & Grid
+
 
 
 🚀 Getting Started
@@ -46,6 +49,7 @@ Frontend Setup
 Navigate to frontend/, install with npm install, then run npm run dev
 
 
+
 🎨 Design System
 
 Primary Color: #8B4513 (Saddle Brown)
@@ -57,17 +61,7 @@ Typography: 'Segoe UI', clean and modern
 Theme: Warm, inviting, and coffee-branded
 
 
-🤝 Contributing
 
 Fork the repo
 
-Create a branch (feature/YourFeature)
-
-Commit and push
-
-Open a Pull Request
-
-
-📝 License
-
-Licensed under the MIT License. See the LICENSE file for details
+Create a
