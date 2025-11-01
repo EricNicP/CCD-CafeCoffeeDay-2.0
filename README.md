@@ -60,8 +60,3 @@ Typography: 'Segoe UI', clean and modern
 
 Theme: Warm, inviting, and coffee-branded
 
-
-
-Fork the repo
-
-Create a
